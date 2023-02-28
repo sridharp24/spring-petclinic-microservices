@@ -8,7 +8,7 @@ pipeline {
 
     stage ('clone code') {
       steps {
-        git 'https://github.com/sridharp24/spring-petclinic.git'
+        git 'https://github.com/sridharp24/spring-petclinic-microservices.git'
       }
     }
 
