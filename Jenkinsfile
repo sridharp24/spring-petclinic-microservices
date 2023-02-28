@@ -20,7 +20,7 @@ pipeline {
 
    stage ('deploy war') {
       steps {        
-        deploy adapters: [tomcat8(credentialsId: 'TomcatCred', path: '', url: 'http://localhost:9090')], contextPath: '/petclinic', war: '**/*.jar'
+        deploy adapters: [tomcat8(credentialsId: 'TomcatCred', path: '', url: 'http://localhost:9090')], contextPath: '/petclinic', jar: '**/*.jar'
         }
        }
 
