@@ -14,13 +14,13 @@ pipeline {
 
     stage ('build code') {
       steps {
-        sh 'mvn clean package'
+        sh 'mvnw clean install -P buildDocker'
       }
     }
 
-   stage ('deploy war') {
+   stage ('start service') {
       steps {        
-        deploy adapters: [tomcat8(credentialsId: 'TomcatCred', path: '', url: 'http://localhost:9090')], contextPath: '/petclinic', jar: '**/*.jar'
+        sh 'scripts/run_all.sh'        
         }
        }
 
