@@ -14,7 +14,7 @@ pipeline {
 
     stage ('build code') {
       steps {
-        sh 'mvnw clean install -P buildDocker'
+        sh '/var/lib/jenkins/workspace/spring-petclinic-microservices/mvnw clean install -P buildDocker'
       }
     }
 
