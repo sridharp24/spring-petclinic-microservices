@@ -20,7 +20,7 @@ pipeline {
 
    stage ('start service') {
       steps {        
-        sh 'scripts/run_all.sh'        
+        sh '/var/lib/jenkins/workspace/spring-petclinic-microservices/scripts/run_all.sh'        
         }
        }
 
