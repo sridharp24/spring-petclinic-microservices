@@ -20,7 +20,7 @@ pipeline {
 
    stage ('start service') {
       steps {        
-        sh '/var/lib/jenkins/workspace/spring-petclinic-microservices/scripts/run_all.sh'        
+        sh 'docker-compose --file /var/lib/jenkins/workspace/spring-petclinic-microservices/docker-compose.yml up'        
         }
        }
 
